@@ -1,1 +1,8 @@
-{"latestVersion":"1.0.0","latestVersionCode":1,"minSupportedVersionCode":1,"downloadUrl":"https://gitee.com/su-zijie21/duoschedule/releases/download/v1.0.0/app-release.apk","releaseNotes":"当前为最新版本","forceUpdate":false}
+{
+  "latestVersion": "1.1.0",
+  "latestVersionCode": 11000,
+  "minSupportedVersionCode": 10000,
+  "downloadUrl": "https://cdn.jsdelivr.net/gh/yang-jk/duoschedule-update@main/app-release.apk",
+  "releaseNotes": "1. 新版本功能更新\n2. 修复已知问题\n3. 性能优化与界面改进",
+  "forceUpdate": false
+}
