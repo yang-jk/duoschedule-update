@@ -2,7 +2,7 @@
   "latestVersion": "1.1.0",
   "latestVersionCode": 11000,
   "minSupportedVersionCode": 10000,
-  "downloadUrl": "https://cdn.jsdelivr.net/gh/yang-jk/duoschedule-update@main/app-release.apk",
+  "downloadUrl": "https://raw.githubusercontent.com/yang-jk/duoschedule-update/main/app-release.apk",
   "releaseNotes": "1. 新版本功能更新\n2. 修复已知问题\n3. 性能优化与界面改进",
   "forceUpdate": false
 }
