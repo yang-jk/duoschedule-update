@@ -1,8 +1,8 @@
 {
-  "latestVersion": "1.15.0",
-  "latestVersionCode": 25000,
+  "latestVersion": "1.16.0",
+  "latestVersionCode": 116000,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v1.15.0/DuoSchedule-1.15.0.apk",
-  "releaseNotes": "### 变更类型：功能增强\n### 变更内容\n**GitHub Actions CI/CD 自动打包发布**\n1. **新增**：`.github/workflows/release.yml` GitHub Actions 工作流，当推送 `v*` 格式 tag 时自动触发\n2. **新增**：自动构建 release APK（签名、混淆），重命名为 `DuoSchedule-{版本号}.apk`\n3. **新增**：自动创建 GitHub Release，附带 APK 文件\n4. **新增**：自动更新 `yang-jk/duoschedule-update` 仓库的 `update.json`，使 app 内更新检查生效\n5. **修改**：`app/build.gradle.kts` 新增签名配置，支持从环境变量（CI）或 `key.properties`（本地）读取 keystore 信息",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v1.16.0/DuoSchedule-1.16.0.apk",
+  "releaseNotes": "### 变更类型：功能增强\n### 变更内容\n**重写 GitHub Actions 发布工作流与版本号计算规则**\n1. **BREAKING**：版本号计算公式从 `MAJOR × 10000 + MINOR × 1000 + PATCH` 改为 `MAJOR × 100000 + MINOR × 1000 + PATCH`，使 versionCode 与 versionName 视觉对应关系更直观（如 2.06.06 → 206006）\n2. **新增**：工作流自动从 versionName 计算 versionCode，并校验与 build.gradle.kts 中声明的一致，不一致时构建失败\n3. **优化**：将版本信息提取和 changelog 提取拆分为独立步骤，changelog 提取失败时使用默认文案兜底\n4. **优化**：GitHub Release 步骤和更新仓库步骤添加 step id，支持状态追踪\n5. **新增**：更新仓库步骤添加 `continue-on-error: true`，失败不阻塞后续通知\n6. **增强**：ServerChan 通知改为汇总模式，分别报告 APK 构建、Release 创建、更新仓库三个步骤的独立状态（✅成功/❌失败/⏭️跳过），包含版本号（versionName + versionCode）",
   "forceUpdate": false
 }
