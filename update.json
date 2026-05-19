@@ -1,8 +1,8 @@
 {
-  "latestVersion": "1.16.0",
-  "latestVersionCode": 116000,
+  "latestVersion": "1.16.3",
+  "latestVersionCode": 116003,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v1.16.0/DuoSchedule-1.16.0.apk",
-  "releaseNotes": "### 变更类型：功能增强\n### 变更内容\n**重写 GitHub Actions 发布工作流与版本号计算规则**\n1. **BREAKING**：版本号计算公式从 `MAJOR × 10000 + MINOR × 1000 + PATCH` 改为 `MAJOR × 100000 + MINOR × 1000 + PATCH`，使 versionCode 与 versionName 视觉对应关系更直观（如 2.06.06 → 206006）\n2. **新增**：工作流自动从 versionName 计算 versionCode，并校验与 build.gradle.kts 中声明的一致，不一致时构建失败\n3. **优化**：将版本信息提取和 changelog 提取拆分为独立步骤，changelog 提取失败时使用默认文案兜底\n4. **优化**：GitHub Release 步骤和更新仓库步骤添加 step id，支持状态追踪\n5. **新增**：更新仓库步骤添加 `continue-on-error: true`，失败不阻塞后续通知\n6. **增强**：ServerChan 通知改为汇总模式，分别报告 APK 构建、Release 创建、更新仓库三个步骤的独立状态（✅成功/❌失败/⏭️跳过），包含版本号（versionName + versionCode）",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v1.16.3/DuoSchedule-1.16.3.apk",
+  "releaseNotes": "：Bug修复\n\n修复应用内更新安装 APK 崩溃 + 优化更新日志和 ServerChan 通知格式\n1. 修复：AndroidManifest.xml 添加 REQUEST_INSTALL_PACKAGES 权限声明，修复安装 APK 时 SecurityException 崩溃\n2. 优化：changelog 提取去除 Markdown 特征（加粗标记、标题符号、变更类型/内容标签），输出纯文本\n3. 优化：ServerChan 通知使用 Markdown 兼容换行（行尾双空格），确保正确分行显示",
   "forceUpdate": false
 }
