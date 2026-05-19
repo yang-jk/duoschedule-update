@@ -1,8 +1,8 @@
 {
-  "latestVersion": "1.1.0",
-  "latestVersionCode": 11000,
-  "minSupportedVersionCode": 10000,
-  "downloadUrl": "https://raw.githubusercontent.com/yang-jk/duoschedule-update/main/app-release.apk",
-  "releaseNotes": "1. 新版本功能更新\n2. 修复已知问题\n3. 性能优化与界面改进",
+  "latestVersion": "1.15.0",
+  "latestVersionCode": 25000,
+  "minSupportedVersionCode": 1,
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v1.15.0/DuoSchedule-1.15.0.apk",
+  "releaseNotes": "### 变更类型：功能增强 ### 变更内容 **GitHub Actions CI/CD 自动打包发布** 1. **新增**：`.github/workflows/release.yml` GitHub Actions 工作流，当推送 `v*` 格式 tag 时自动触发 2. **新增**：自动构建 release APK（签名、混淆），重命名为 `DuoSchedule-{版本号}.apk` 3. **新增**：自动创建 GitHub Release，附带 APK 文件 4. **新增**：自动更新 `yang-jk/duoschedule-update` 仓库的 `update.json`，使 app 内更新检查生效 5. **修改**：`app/build.gradle.kts` 新增签名配置，支持从环境变量（CI）或 `key.properties`（本地）读取 keystore 信息 ",
   "forceUpdate": false
 }
