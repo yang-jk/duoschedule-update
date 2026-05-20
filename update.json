@@ -3,6 +3,6 @@
   "latestVersionCode": 30000,
   "minSupportedVersionCode": 1,
   "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v3.0.0/DuoSchedule-3.0.0.apk",
-  "releaseNotes": "版本 3.0.0 更新",
+  "releaseNotes": "：重大变更\n\n统一版本号计算规则 + 修复 GitHub Actions 构建签名错误\n1. BREAKING：版本号计算公式统一为 `versionCode = MAJOR × 10000 + MINOR × 100 + PATCH`，确保 versionCode 与 versionName 视觉对应关系直观（如 3.0.0 → 30000，12.12.12 → 121212）\n2. 修复：修正 GitHub Actions 工作流中的版本号验证公式，与实际使用的公式保持一致\n3. 修复：修复 GitHub Actions 构建时密钥库路径错误（`app/app/keystore` → `keystore`），解决 `validateSigningRelease` 任务失败问题",
   "forceUpdate": false
 }
