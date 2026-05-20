@@ -1,8 +1,8 @@
 {
-  "latestVersion": "3.1.0",
-  "latestVersionCode": 30100,
+  "latestVersion": "3.2.3",
+  "latestVersionCode": 30203,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v3.1.0/DuoSchedule-3.1.0.apk",
-  "releaseNotes": "：功能增强\n\n重新梳理 Gitee 仓库与自动打包 APK 工作流\n1. 新增：`scripts/cleanup_gitee_update_repo.py` 脚本，用于清理 Gitee `su-zijie21/duoschedule-update` 仓库中除 `update.json` 以外的所有文件（该仓库错误上传了项目源代码）\n2. 重构：`update_repo.py` 移除 `USE_GITEE` 环境变量依赖，改为自动检测 `GITEE_TOKEN` 是否存在来决定是否更新 Gitee `update.json`\n3. 新增：`update_repo.py` 支持 `GITEE_RELEASE_SUCCESS` 环境变量，Gitee Release 创建失败时 Gitee `update.json` 的 downloadUrl 自动回退到 GitHub Release URL，避免用户获取到 404 下载链接\n4. 重构：`release.yml` Gitee Release 步骤输出创建结果（`success=true/false`），传递给 `update_repo.py` 步骤\n5. 优化：ServerChan 通知在 Gitee Release 失败时提示 downloadUrl 已回退到 GitHub\n6. 清理：移除项目根目录残留的 `update.json` 文件，`.gitignore` 添加 `update.json` 条目",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v3.2.3/DuoSchedule-3.2.3.apk",
+  "releaseNotes": "：Bug修复\n\n修复 CI 构建失败：移除阿里云镜像配置\n1. 修复：移除 settings.gradle.kts 中的阿里云镜像源，阿里云镜像在 CI（GitHub Actions）上返回错误响应导致 Gradle 无法解析插件（如 KSP 2.3.6），干扰仓库回退机制\n2. 修复：恢复 gradle-wrapper.properties 中 Gradle distribution 的原始下载地址（services.gradle.org），CI 环境可直接访问\n3. 说明：本地开发如需国内镜像加速，请在 `~/.gradle/init.gradle` 中配置阿里云镜像",
   "forceUpdate": false
 }
