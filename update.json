@@ -1,8 +1,8 @@
 {
-  "latestVersion": "3.0.3",
-  "latestVersionCode": 30003,
+  "latestVersion": "3.1.0",
+  "latestVersionCode": 30100,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v3.0.3/DuoSchedule-3.0.3.apk",
-  "releaseNotes": "：Bug修复\n\n修复 Gitee API 认证方式错误 + jsDelivr CDN 缓存刷新\n1. 修复：update_repo.py 对 Gitee API 使用了 GitHub 的 `Authorization: token` 头认证，但 Gitee API 需要使用 `access_token` 查询参数和请求体字段认证，导致 Gitee update.json 更新一直失败\n2. 新增：update_repo.py 更新 GitHub update.json 后自动刷新 jsDelivr CDN 缓存（访问 purge.jsdelivr.net），避免 app 从 CDN 获取到过时的更新信息\n3. 重构：update_repo.py 拆分为 `update_github()` 和 `update_gitee()` 两个独立函数，分别使用各自平台正确的认证方式\n4. 修复：Gitee Release 仓库名大小写错误，代码中写的是 `DuoSchedule`（大写），实际 Gitee 仓库名为 `duoschedule`（全小写），导致 downloadUrl 指向不存在的仓库",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v3.1.0/DuoSchedule-3.1.0.apk",
+  "releaseNotes": "：功能增强\n\n重新梳理 Gitee 仓库与自动打包 APK 工作流\n1. 新增：`scripts/cleanup_gitee_update_repo.py` 脚本，用于清理 Gitee `su-zijie21/duoschedule-update` 仓库中除 `update.json` 以外的所有文件（该仓库错误上传了项目源代码）\n2. 重构：`update_repo.py` 移除 `USE_GITEE` 环境变量依赖，改为自动检测 `GITEE_TOKEN` 是否存在来决定是否更新 Gitee `update.json`\n3. 新增：`update_repo.py` 支持 `GITEE_RELEASE_SUCCESS` 环境变量，Gitee Release 创建失败时 Gitee `update.json` 的 downloadUrl 自动回退到 GitHub Release URL，避免用户获取到 404 下载链接\n4. 重构：`release.yml` Gitee Release 步骤输出创建结果（`success=true/false`），传递给 `update_repo.py` 步骤\n5. 优化：ServerChan 通知在 Gitee Release 失败时提示 downloadUrl 已回退到 GitHub\n6. 清理：移除项目根目录残留的 `update.json` 文件，`.gitignore` 添加 `update.json` 条目",
   "forceUpdate": false
 }
