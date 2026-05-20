@@ -1,8 +1,8 @@
 {
-  "latestVersion": "3.3.6",
-  "latestVersionCode": 30306,
+  "latestVersion": "3.3.1",
+  "latestVersionCode": 30301,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v3.3.6/DuoSchedule-3.3.6.apk",
-  "releaseNotes": "：Bug修复\n\n修复 CI 推送标签被拒绝：改用 GitHub API 创建标签\n1. 修复：`git push origin \"$TAG\" --force` 推送包含工作流文件变更的 tag 时，`GITHUB_TOKEN` 缺少 `workflow` scope 被拒绝。改用 `gh api` 通过 GitHub REST API 创建/更新标签引用（`POST /repos/{owner}/{repo}/git/refs`），API 方式不受 workflow scope 限制\n2. 移除：删除无效的 `workflows: write` 权限声明（GitHub Actions 不支持该权限值）",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v3.3.1/DuoSchedule-3.3.1.apk",
+  "releaseNotes": "：功能优化\n\n更新弹窗重构 + 多项 UI 修复\n1. 重构：将 `UpdateScreen`（全屏页面）重构为 `UpdateDialog`（Glass 风格弹窗组件），使用项目已有的 Backdrop + drawBackdrop + ContinuousRoundedRectangle 弹窗模式，宽度 300.dp\n2. 重构：CheckingContent 布局对齐 NoUpdateContent/ErrorContent 结构（40dp CircularProgressIndicator + headlineSmall 标题 + bodyMedium 副标题）\n3. 重构：使用 LiquidGlassButton 替代原有的 Material Button/OutlinedButton\n4. 重构：AboutScreen 移除 `onNavigateToUpdate` 参数，\"检查更新\"行点击改为在当前页面弹出 UpdateDialog\n5. 移除：Navigation.kt 移除 `settings/update` 路由\n6. 修复：AboutScreen 应用名称从 \"DuoSchedule\" 改为 \"双人课程表\"\n7. 修复：AboutScreen 图标从 Icons.Outlined.Schedule 替换为应用 launcher icon\n8. 修复：SettingsScreen \"关于\"行标题从 \"关于 DuoSchedule\" 改为 \"关于 双人课程表\"\n9. 修复：SettingsScreen 版本号从硬编码改为动态读取 PackageInfo.versionName\n10. 修复：SegmentedControl 首次打开时滑块指示器飞入动画（animatedOffset 初始值改为 -1f，显示条件增加 animatedOffset.value >= 0）\n11. 优化：CurrentCourseCard 人名 labelMedium→bodyMedium、课程名 bodyLarge→titleMedium、地点 bodySmall→bodyMedium、下节课预告 labelSmall→bodySmall",
   "forceUpdate": false
 }
