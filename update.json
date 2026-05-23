@@ -1,8 +1,8 @@
 {
-  "latestVersion": "3.3.1",
-  "latestVersionCode": 30301,
+  "latestVersion": "3.4.0",
+  "latestVersionCode": 30400,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v3.3.1/DuoSchedule-3.3.1.apk",
-  "releaseNotes": "：功能优化\n\n更新弹窗重构 + 多项 UI 修复\n1. 重构：将 `UpdateScreen`（全屏页面）重构为 `UpdateDialog`（Glass 风格弹窗组件），使用项目已有的 Backdrop + drawBackdrop + ContinuousRoundedRectangle 弹窗模式，宽度 300.dp\n2. 重构：CheckingContent 布局对齐 NoUpdateContent/ErrorContent 结构（40dp CircularProgressIndicator + headlineSmall 标题 + bodyMedium 副标题）\n3. 重构：使用 LiquidGlassButton 替代原有的 Material Button/OutlinedButton\n4. 重构：AboutScreen 移除 `onNavigateToUpdate` 参数，\"检查更新\"行点击改为在当前页面弹出 UpdateDialog\n5. 移除：Navigation.kt 移除 `settings/update` 路由\n6. 修复：AboutScreen 应用名称从 \"DuoSchedule\" 改为 \"双人课程表\"\n7. 修复：AboutScreen 图标从 Icons.Outlined.Schedule 替换为应用 launcher icon\n8. 修复：SettingsScreen \"关于\"行标题从 \"关于 DuoSchedule\" 改为 \"关于 双人课程表\"\n9. 修复：SettingsScreen 版本号从硬编码改为动态读取 PackageInfo.versionName\n10. 修复：SegmentedControl 首次打开时滑块指示器飞入动画（animatedOffset 初始值改为 -1f，显示条件增加 animatedOffset.value >= 0）\n11. 优化：CurrentCourseCard 人名 labelMedium→bodyMedium、课程名 bodyLarge→titleMedium、地点 bodySmall→bodyMedium、下节课预告 labelSmall→bodySmall",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v3.4.0/DuoSchedule-3.4.0.apk",
+  "releaseNotes": "：功能增强\n\n设备屏幕圆角适配\n1. 新增：`getRoundedCorner()`、`getRoundedCornerTop()`、`getRoundedCornerBottom()` Composable 函数，通过 Android 12+ `Display.getRoundedCorner()` API 获取设备屏幕圆角半径，低版本或不支持时回退到预设值 0.dp\n2. 新增：`LocalDeviceCornerRadius` CompositionLocal，在 Theme 级别提供设备圆角值\n3. 增强：底部导航栏 `LiquidBottomTabs` 外层容器添加设备底部圆角裁剪\n4. 增强：`GlassBottomSheet` 底部圆角适配为设备屏幕底部圆角\n5. 增强：`ScrollTopBlurOverlay` 顶部圆角适配为设备屏幕顶部圆角\n6. 增强：所有页面（MainScreen、ScheduleScreen、SettingsScreen、DisplaySettingsScreen、NotificationSettingsScreen、ScheduleSettingsScreen、PeriodTimesSettingsScreen、DataManagementScreen、AboutScreen、ChangelogScreen、AcknowledgmentsScreen、LegalScreen、ImportPreviewScreen、CourseEditScreen）最外层容器添加设备圆角裁剪",
   "forceUpdate": false
 }
