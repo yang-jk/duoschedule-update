@@ -1,8 +1,8 @@
 {
-  "latestVersion": "3.4.0",
-  "latestVersionCode": 30400,
+  "latestVersion": "3.4.2",
+  "latestVersionCode": 30402,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v3.4.0/DuoSchedule-3.4.0.apk",
-  "releaseNotes": "：功能增强\n\n设备屏幕圆角适配\n1. 新增：`getRoundedCorner()`、`getRoundedCornerTop()`、`getRoundedCornerBottom()` Composable 函数，通过 Android 12+ `Display.getRoundedCorner()` API 获取设备屏幕圆角半径，低版本或不支持时回退到预设值 0.dp\n2. 新增：`LocalDeviceCornerRadius` CompositionLocal，在 Theme 级别提供设备圆角值\n3. 增强：底部导航栏 `LiquidBottomTabs` 外层容器添加设备底部圆角裁剪\n4. 增强：`GlassBottomSheet` 底部圆角适配为设备屏幕底部圆角\n5. 增强：`ScrollTopBlurOverlay` 顶部圆角适配为设备屏幕顶部圆角\n6. 增强：所有页面（MainScreen、ScheduleScreen、SettingsScreen、DisplaySettingsScreen、NotificationSettingsScreen、ScheduleSettingsScreen、PeriodTimesSettingsScreen、DataManagementScreen、AboutScreen、ChangelogScreen、AcknowledgmentsScreen、LegalScreen、ImportPreviewScreen、CourseEditScreen）最外层容器添加设备圆角裁剪",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v3.4.2/DuoSchedule-3.4.2.apk",
+  "releaseNotes": "：Bug修复\n\n修复设备屏幕圆角适配回退不完整导致编译错误\n1. 修复：14个文件仍引用已移除的 `LocalDeviceCornerRadius`、`getRoundedCornerBottom()`、`RoundedCornerShape` 导致编译失败\n2. 移除：所有页面 Scaffold/Box/Column 上的 `Modifier.clip(RoundedCornerShape(cornerRadius))` 设备圆角裁剪\n3. 移除：所有页面中的 `val cornerRadius = LocalDeviceCornerRadius.current` 变量声明\n4. 移除：不再需要的 `import androidx.compose.foundation.shape.RoundedCornerShape`、`import androidx.compose.ui.draw.clip`、`import com.duoschedule.ui.theme.LocalDeviceCornerRadius`\n5. 恢复：`GlassBottomSheet` 底部圆角从 `getRoundedCornerBottom()` 恢复为 `GlassBottomSheetDefaults.CornerRadiusBottom`",
   "forceUpdate": false
 }
