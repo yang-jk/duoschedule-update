@@ -1,8 +1,8 @@
 {
-  "latestVersion": "4.6.3",
-  "latestVersionCode": 40603,
+  "latestVersion": "4.6.6",
+  "latestVersionCode": 40606,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.6.3/DuoSchedule-4.6.3.apk",
-  "releaseNotes": "：Bug 修复\n\n修复 SegmentedControl 首次加载时异常触发滑块动画\n1. 修复：将 `hasInitialized` 标记替换为 `userInteracted`，只有用户真正点击选项时才启用滑块动画，数据加载导致的位置变化一律 snapTo 直接定位，避免首次加载时滑块从错误位置滑动到正确位置\n### 涉及文件",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.6.6/DuoSchedule-4.6.6.apk",
+  "releaseNotes": "：Bug 修复\n\n修复重新进入同步设置页面后复制同步码不生效\n1. 修复：ViewModel 初始化时从已保存的 SyncConfig 重新生成同步码，确保离开页面再回来后仍可复制同步码\n### 涉及文件",
   "forceUpdate": false
 }
