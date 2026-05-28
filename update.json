@@ -1,8 +1,8 @@
 {
-  "latestVersion": "4.6.6",
-  "latestVersionCode": 40606,
+  "latestVersion": "4.7.3",
+  "latestVersionCode": 40703,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.6.6/DuoSchedule-4.6.6.apk",
-  "releaseNotes": "：Bug 修复\n\n修复重新进入同步设置页面后复制同步码不生效\n1. 修复：ViewModel 初始化时从已保存的 SyncConfig 重新生成同步码，确保离开页面再回来后仍可复制同步码\n### 涉及文件",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.7.3/DuoSchedule-4.7.3.apk",
+  "releaseNotes": "：Bug 修复\n\n修复离开同步房间时未清除 WebDAV 云端文件\n1. 修复：`leaveRoom()` 离开房间时删除 WebDAV 上的 data.json、meta.json 和房间目录，避免云端残留数据\n2. 优化：`leaveRoom()` 添加 `withContext(Dispatchers.IO)` 确保网络操作在 IO 线程，即使删除失败也继续清除本地配置\n### 涉及文件",
   "forceUpdate": false
 }
