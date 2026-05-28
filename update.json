@@ -1,8 +1,8 @@
 {
-  "latestVersion": "3.4.2",
-  "latestVersionCode": 30402,
+  "latestVersion": "4.6.3",
+  "latestVersionCode": 40603,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v3.4.2/DuoSchedule-3.4.2.apk",
-  "releaseNotes": "：Bug修复\n\n修复设备屏幕圆角适配回退不完整导致编译错误\n1. 修复：14个文件仍引用已移除的 `LocalDeviceCornerRadius`、`getRoundedCornerBottom()`、`RoundedCornerShape` 导致编译失败\n2. 移除：所有页面 Scaffold/Box/Column 上的 `Modifier.clip(RoundedCornerShape(cornerRadius))` 设备圆角裁剪\n3. 移除：所有页面中的 `val cornerRadius = LocalDeviceCornerRadius.current` 变量声明\n4. 移除：不再需要的 `import androidx.compose.foundation.shape.RoundedCornerShape`、`import androidx.compose.ui.draw.clip`、`import com.duoschedule.ui.theme.LocalDeviceCornerRadius`\n5. 恢复：`GlassBottomSheet` 底部圆角从 `getRoundedCornerBottom()` 恢复为 `GlassBottomSheetDefaults.CornerRadiusBottom`",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.6.3/DuoSchedule-4.6.3.apk",
+  "releaseNotes": "：Bug 修复\n\n修复 SegmentedControl 首次加载时异常触发滑块动画\n1. 修复：将 `hasInitialized` 标记替换为 `userInteracted`，只有用户真正点击选项时才启用滑块动画，数据加载导致的位置变化一律 snapTo 直接定位，避免首次加载时滑块从错误位置滑动到正确位置\n### 涉及文件",
   "forceUpdate": false
 }
