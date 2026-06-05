@@ -1,8 +1,8 @@
 {
-  "latestVersion": "4.7.3",
-  "latestVersionCode": 40703,
+  "latestVersion": "4.8.0",
+  "latestVersionCode": 40800,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.7.3/DuoSchedule-4.7.3.apk",
-  "releaseNotes": "：Bug 修复\n\n修复离开同步房间时未清除 WebDAV 云端文件\n1. 修复：`leaveRoom()` 离开房间时删除 WebDAV 上的 data.json、meta.json 和房间目录，避免云端残留数据\n2. 优化：`leaveRoom()` 添加 `withContext(Dispatchers.IO)` 确保网络操作在 IO 线程，即使删除失败也继续清除本地配置\n### 涉及文件",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.8.0/DuoSchedule-4.8.0.apk",
+  "releaseNotes": "：新增功能\n\n适配 MAML 小部件，支持小米/MIUI/HyperOS 桌面小组件\n1. 新增：4 个 MAML 小部件包（双人课程表、我的课程、Ta的课程、共同空闲），放置于 `app/src/main/assets/maml_widgets/` 目录\n2. 新增：ScheduleContentProvider 新增 4 个 MAML 专用数据端点（`maml/schedule`、`maml/my_courses`、`maml/ta_courses`、`maml/free_time`），返回列式 Cursor 供 MAML ContentProviderBinder 消费\n3. 新增：每个小部件包含 manifest.xml（MAML 布局）、description.xml（描述信息）、preview 图片\n4. 支持：深色模式适配，使用 `#__darkmode` 全局变量和 `ifelse` 条件表达式切换配色\n5. 支持：通过 ContentProviderBinder 绑定应用数据，实现课程信息实时显示\n### 涉及文件\n> 补录：教务系统导入功能（WebView 浏览器方案）\n>\n> 此功能已在先前版本中实现但未记录变更日志，现补录如下：\n>\n> 1. 新增：`EducationImportScreen` 学校选择页面，展示已注册的学校列表，点击进入对应学校的 WebView 登录页\n> 2. 新增：`EducationWebViewScreen` WebView 浏览器页面，用户在浏览器中自行登录教务系统，自动检测课表页面并解析\n> 3. 新增：`QiangzhiSchoolAdapter` 强智教务系统适配器（辽宁石油化工大学），实现 SchoolAdapter 接口\n> 4. 新增：`ZhengfangSchoolAdapter` 正方教务系统适配器，支持自定义 baseUrl\n> 5. 新增：`SchoolAdapter` 接口和 `SupportedSchools` 注册表，支持通过 SchoolInfo 配置 loginUrl 和 scheduleUrlPath\n> 6. 新增：`SchoolInfo` 数据类包含 vpnHint 字段，提示用户需先连接学校 VPN\n> 7. 修改：Navigation 添加 educationImport 和 educationWebView 路由\n> 8. 修改：EducationSystemImporter 注册两个学校适配器\n>\n> 涉及文件\n>\n> - `app/src/main/java/com/duoschedule/ui/settings/EducationImportScreen.kt`\n> - `app/src/main/java/com/duoschedule/ui/settings/EducationWebViewScreen.kt`\n> - `app/src/main/java/com/duoschedule/data/importexport/QiangzhiSchoolAdapter.kt`\n> - `app/src/main/java/com/duoschedule/data/importexport/ZhengfangSchoolAdapter.kt`\n> - `app/src/main/java/com/duoschedule/data/importexport/ImportExportModels.kt`\n> - `app/src/main/java/com/duoschedule/data/importexport/EducationSystemImporter.kt`",
   "forceUpdate": false
 }
