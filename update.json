@@ -1,8 +1,8 @@
 {
-  "latestVersion": "4.12.0",
-  "latestVersionCode": 41200,
+  "latestVersion": "4.13.1",
+  "latestVersionCode": 41301,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.12.0/DuoSchedule-4.12.0.apk",
-  "releaseNotes": "：优化\n\n课程表界面性能彻底优化：用 HorizontalPager 替换自定义滑动手势，解决卡顿/回弹/闪烁/跳转问题\n1. 优化：用 HorizontalPager 替换自定义 `detectHorizontalDragGestures` 滑动手势，原生处理手势检测、动画和状态管理，消除与 verticalScroll 的手势冲突\n2. 优化：将课程数据计算下沉到每个 Pager 页面内部，避免一次性计算三周数据导致的级联重组\n3. 修复：currentWeek 变更不再导致课表突然跳转，selectedWeek 由 pagerState 派生\n4. 优化：使用共享滚动位置值，新页面创建时即使用正确初始位置，消除两帧闪烁",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.13.1/DuoSchedule-4.13.1.apk",
+  "releaseNotes": "：修复\n\n修复课表首次打开闪烁问题：用 derivedStateOf + key() 替代 LaunchedEffect 控制 pager 创建\n1. 修复：将 `isDataLoaded` 从 `LaunchedEffect`（异步）改为 `derivedStateOf`（同步计算），确保数据就绪判断与数据更新在同一帧完成\n2. 修复：用 `key(isDataReady)` 包裹 pager 创建区域，确保 `rememberPagerState` 在数据就绪时同步重建，消除 LaunchedEffect 异步调度导致的帧延迟",
   "forceUpdate": false
 }
