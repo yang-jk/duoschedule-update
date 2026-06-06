@@ -1,8 +1,8 @@
 {
-  "latestVersion": "4.11.1",
-  "latestVersionCode": 41101,
+  "latestVersion": "4.12.0",
+  "latestVersionCode": 41200,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.11.1/DuoSchedule-4.11.1.apk",
-  "releaseNotes": "：修复\n\n修复课表界面自适应行高遗留问题：课程名称行数自适应、左右滑动加载优化\n1. 修复：课程名称 maxLines 根据卡片高度动态计算，行高较大时显示更多行\n2. 修复：三个周的 WeeklyScheduleGrid 使用独立 scrollState，修复左右滑动时相邻周课程不可见的问题",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.12.0/DuoSchedule-4.12.0.apk",
+  "releaseNotes": "：优化\n\n课程表界面性能彻底优化：用 HorizontalPager 替换自定义滑动手势，解决卡顿/回弹/闪烁/跳转问题\n1. 优化：用 HorizontalPager 替换自定义 `detectHorizontalDragGestures` 滑动手势，原生处理手势检测、动画和状态管理，消除与 verticalScroll 的手势冲突\n2. 优化：将课程数据计算下沉到每个 Pager 页面内部，避免一次性计算三周数据导致的级联重组\n3. 修复：currentWeek 变更不再导致课表突然跳转，selectedWeek 由 pagerState 派生\n4. 优化：使用共享滚动位置值，新页面创建时即使用正确初始位置，消除两帧闪烁",
   "forceUpdate": false
 }
