@@ -1,8 +1,8 @@
 {
-  "latestVersion": "4.10.0",
-  "latestVersionCode": 41000,
+  "latestVersion": "4.11.0",
+  "latestVersionCode": 41100,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.10.0/DuoSchedule-4.10.0.apk",
-  "releaseNotes": "：优化\n\n优化页面切换效果：Miuix/iOS主题分别适配不同转场动画，新增课表→编辑页共享元素转场\n1. 优化：Miuix 主题和 iOS 主题分别适配不同的页面转场动画风格\n2. 新增：课表→编辑页共享元素转场，课程卡片点击进入编辑页时一镜到底动画",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.11.0/DuoSchedule-4.11.0.apk",
+  "releaseNotes": "：优化\n\n课表网格自适应高度、周切换滚动位置保持、课程过滤性能优化\n1. 优化：课表网格单元格高度根据可用空间和总课节数动态计算（60-120dp），替代固定100dp高度\n2. 修复：周切换时共享滚动状态，切换周次后网格保持相同滚动位置，消除闪烁\n3. 优化：使用 derivedStateOf 优化课程过滤逻辑，减少不必要的重组",
   "forceUpdate": false
 }
