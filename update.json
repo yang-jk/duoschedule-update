@@ -1,8 +1,8 @@
 {
-  "latestVersion": "4.22.0",
-  "latestVersionCode": 42200,
+  "latestVersion": "4.30.0",
+  "latestVersionCode": 43000,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.22.0/DuoSchedule-4.22.0.apk",
-  "releaseNotes": "：功能更新\n\n同步流程重构：从同步码模式简化为房间码模式\n1. 修改：创建房间固定使用坚果云 WebDAV，移除提供商选择（坚果云/数据胶囊/自定义）和自定义 URL 输入\n2. 修改：加入房间改为输入6位房间码，移除同步码输入和角色选择器（\"我是我/我是Ta\"）\n3. 新增：加入房间后弹出名字选择弹窗，用户从两个名字中选择自己的身份\n4. 修改：已同步状态区域\"同步码\"改为\"房间码\"，复制按钮改为\"复制房间码\"\n5. 修改：底部说明文字更新为\"创建房间后分享房间码给对方，对方输入房间码即可加入\"\n6. 新增：App从后台恢复时自动同步\n7. 新增：`SyncCodeGenerator.generateRoomCode()` 方法，生成6位随机数字字符串（100000-999999范围）\n8. 移除：`SyncCodeGenerator.generate()`、`parse()`、`isValidSyncCode()` 方法及所有DSYNC相关常量\n9. 移除：`SyncViewModel.isValidSyncCode()` 方法\n10. 移除：`SyncManager.getSyncCode()` 方法，替换为 `getRoomCode(config)` 从云端 meta.json 读取房间码\n11. 修改：`SyncViewModel.createRoom(url, username, password)` 简化为 `createRoom(username, password)`\n12. 修改：`SyncViewModel.joinRoom(syncCodeInput, chosenRole)` 简化为 `joinRoom(roomCode)`\n13. 新增：`SyncViewModel.pendingJoinInfo` 状态和 `confirmJoinRoom(selectedProfileId)` 方法\n14. 新增：`JoinRoomInfo` 数据类，包含 roomCode、config、profileA、profileB、personAName、personBName\n15. 新增：`findRoomByCode()` 私有方法，遍历 WebDAV 子目录匹配房间码\n16. 新增：`joinRoomWithRoleSelection()` 方法，基于名字选择完成加入\n17. 新增：`WebDavClient.listDirectories()` 和 `parsePropfindDirectories()` 方法\n18. 新增：同步备份机制，上传 data.json 前自动备份云端数据，支持从备份恢复\n19. 修复：`buildCloudDataJson` 推送设置时不再覆盖对方 profileSettings\n20. 修复：`SyncManager` 中 `List<Course>`/`List<Todo>` 到 `List<CloudCourse>`/`List<CloudTodo>` 的类型转换\n21. 修复：`localLastSyncVersion` Long/Int 类型比较错误\n22. 修复：`WebDavClient.parsePropfindDirectories` 中 `hrefRegex.find()` 参数类型错误\n### 涉及文件",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.30.0/DuoSchedule-4.30.0.apk",
+  "releaseNotes": "版本 4.30.0 更新",
   "forceUpdate": false
 }
