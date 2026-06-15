@@ -1,8 +1,10 @@
 {
-  "latestVersion": "4.30.0",
-  "latestVersionCode": 43000,
+  "latestVersion": "4.33.0",
+  "latestVersionCode": 43300,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.30.0/DuoSchedule-4.30.0.apk",
-  "releaseNotes": "版本 4.30.0 更新",
-  "forceUpdate": false
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.33.0/DuoSchedule-4.33.0.apk",
+  "releaseNotes": "- [优化] 设置及二级页面渐变模糊：BlurredBar实现从上到下的渐变模糊效果（参考iOS 27/HyperOS 4液态玻璃设计），模糊始终启用不再依赖滚动状态\n- [优化] 关于页面顶栏添加渐变模糊效果",
+  "forceUpdate": false,
+  "size": "2.8 MB",
+  "date": "2026-06-15"
 }
