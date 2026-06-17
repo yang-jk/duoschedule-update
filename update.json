@@ -1,10 +1,10 @@
 {
-  "latestVersion": "4.34.0",
-  "latestVersionCode": 43400,
+  "latestVersion": "4.38.0",
+  "latestVersionCode": 43800,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.34.0/DuoSchedule-4.34.0.apk",
-  "releaseNotes": "- [新增] 课表页面待办点击预览底部弹窗（TodoPreviewBottomSheet），支持查看和编辑待办详情\n- [新增] 主页时间线无时间待办显示\"待办\"标签\n- [修复] 长按菜单删除课程不再触发预览弹窗（新增courseToDelete变量独立管理删除流程）\n- [修复] String.format统一使用Locale.US，避免部分区域格式异常\n- [优化] 可见性修饰符收紧：多处public/internal改为private（TodoRepository、MainViewModel、CourseNotificationManager等）\n- [优化] OkHttp升级至5.4.0，Haze升级至2.0.0-alpha03\n- [优化] AndroidManifest添加lint抑制注解（USE_EXACT_ALARM、REQUEST_INSTALL_PACKAGES）\n- [优化] mutableStateOf改为mutableIntStateOf避免不必要的装箱\n- [优化] GlassIconButton/GlassSymbolIconButton参数名icon→content\n- [优化] BgEffectBackground使用LocalWindowInfo替代LocalConfiguration判断设备类型\n- [优化] BgEffectElement补充InspectorInfo\n- [优化] 参数顺序规范化（modifier前置）和import优化",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.38.0/DuoSchedule-4.38.0.apk",
+  "releaseNotes": "- [新增] 添加菜单一镜到底放大成编辑页转场方案定稿：支持正向放大（菜单→页面）与反向收缩（页面→菜单）双向动画，BackHandler 拦截系统返回键触发反向收缩动画，保存/删除后自动调用反向收缩回到按钮位置\n- [优化] `AddButtonReveal` 重构为双向动画 API（`startReveal`/`startConceal`/`onConcealComplete`），`AddButtonRevealOverlay` 通过 `revealTarget` 状态统一管理正向与反向动画，移除 `revealInProgress`/`onRevealStart` 旧参数\n- [优化] `CourseEditScreen`/`TodoEditScreen` 进入时通过 `remember { AddButtonReveal.shouldReveal }` 捕获入场意图，避免动画期间状态被重置导致返回路径错误\n- [优化] `ScheduleScreen` 移除旧的 `WindowListPopup` 添加菜单及关联导入，添加按钮统一由 `MainActivity` 的 `AddButtonRevealOverlay` 渲染\n- [修复] `SyncManager` 同步逻辑修复：首次上传与冲突解决时只处理 PERSON_A（自己）的课程/待办，对方课程以云端为准，避免本地缓存的对方数据覆盖云端",
   "forceUpdate": false,
   "size": "2.9 MB",
-  "date": "2026-06-16"
+  "date": "2026-06-17"
 }
