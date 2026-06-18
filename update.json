@@ -1,10 +1,10 @@
 {
-  "latestVersion": "4.38.0",
-  "latestVersionCode": 43800,
+  "latestVersion": "4.39.0",
+  "latestVersionCode": 43900,
   "minSupportedVersionCode": 1,
-  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.38.0/DuoSchedule-4.38.0.apk",
-  "releaseNotes": "- [新增] 添加菜单一镜到底放大成编辑页转场方案定稿：支持正向放大（菜单→页面）与反向收缩（页面→菜单）双向动画，BackHandler 拦截系统返回键触发反向收缩动画，保存/删除后自动调用反向收缩回到按钮位置\n- [优化] `AddButtonReveal` 重构为双向动画 API（`startReveal`/`startConceal`/`onConcealComplete`），`AddButtonRevealOverlay` 通过 `revealTarget` 状态统一管理正向与反向动画，移除 `revealInProgress`/`onRevealStart` 旧参数\n- [优化] `CourseEditScreen`/`TodoEditScreen` 进入时通过 `remember { AddButtonReveal.shouldReveal }` 捕获入场意图，避免动画期间状态被重置导致返回路径错误\n- [优化] `ScheduleScreen` 移除旧的 `WindowListPopup` 添加菜单及关联导入，添加按钮统一由 `MainActivity` 的 `AddButtonRevealOverlay` 渲染\n- [修复] `SyncManager` 同步逻辑修复：首次上传与冲突解决时只处理 PERSON_A（自己）的课程/待办，对方课程以云端为准，避免本地缓存的对方数据覆盖云端",
+  "downloadUrl": "https://github.com/yang-jk/DuoSchedule/releases/download/v4.39.0/DuoSchedule-4.39.0.apk",
+  "releaseNotes": "- [优化] 升级 Miuix 依赖从 0.9.0 到 0.9.2（miuix-blur-android、miuix-ui-android、miuix-preference-android）",
   "forceUpdate": false,
   "size": "2.9 MB",
-  "date": "2026-06-17"
+  "date": "2026-06-18"
 }
